@@ -1,0 +1,58 @@
+[
+  {
+    "type": "power",
+    "source": "system_power_supply",
+    "target": "led_power_regulator",
+    "current": "3A",
+    "voltage": "12V"
+  },
+  {
+    "type": "power",
+    "source": "led_power_regulator",
+    "target": "bezel_led_strip",
+    "current": "2A",
+    "voltage": "5V"
+  },
+  {
+    "type": "data",
+    "label": "LED Data Signal",
+    "source": "main_sbc",
+    "target": "bezel_led_strip",
+    "protocol": "gpio",
+    "sourcePin": "GPIO4",
+    "targetPin": "DIN"
+  },
+  {
+    "type": "power",
+    "label": "Logic Ground Reference",
+    "source": "main_sbc",
+    "target": "bezel_led_strip",
+    "current": "100mA",
+    "voltage": "5V"
+  },
+  {
+    "type": "power",
+    "source": "sbc_power_supply",
+    "target": "main_sbc",
+    "current": "5A",
+    "voltage": "5V"
+  },
+  {
+    "type": "data",
+    "label": "HDMI Video Out",
+    "source": "hdmi_cable",
+    "target": "main_sbc",
+    "protocol": "gpio",
+    "sourcePin": "HDMI_M_0",
+    "targetPin": "HDMI_0"
+  },
+  {
+    "type": "data",
+    "label": "HDMI Video In",
+    "source": "hdmi_cable",
+    "target": "laser_projector",
+    "protocol": "gpio",
+    "sourcePin": "HDMI_M_1",
+    "targetPin": "HDMI_IN"
+  }
+]

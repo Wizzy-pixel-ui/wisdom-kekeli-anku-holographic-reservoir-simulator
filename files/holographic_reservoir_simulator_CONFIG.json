@@ -1,0 +1,1583 @@
+{
+  "plan": "- Design an inverted Pepper's Ghost configuration using an ultra-bright high-contrast display hidden inside a recess in the base to conceal the light source.\n- Select a high-efficiency optical combiner glass with anti-reflective coating on the back surface, angling it precisely at 45 degrees to project the reservoir simulation.\n- Integrate a single-board computer like a Raspberry Pi 5 to run the 3D reservoir simulation rendering pipeline and output to the hidden display.\n- Construct a matte-black light-absorbing enclosure using CNC-routed MDF or 3D-printed parts to eliminate internal reflections and mask the glass edges.\n- Install an addressable LED bezel or ambient backlight inside the chamber to control contrast and enhance the illusion of the model floating in mid-air.",
+  "nodes": [
+    {
+      "id": "main_sbc",
+      "name": "Main Controller SBC",
+      "pins": [
+        "5V",
+        "GND",
+        "TX",
+        "RX",
+        "SDA",
+        "SCL",
+        "GPIO4",
+        "HDMI_0",
+        "USB_C_PWR"
+      ],
+      "type": "mcu",
+      "partId": "8ae51f3b-1133-459c-a997-be508d2adc5a",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Raspberry+Pi+5+%288GB%29&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://cdn-shop.adafruit.com/640x480/6416-03.jpg",
+      "material": "PCB/Electronics",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "pins",
+            "value": "GPIO (40-pin),MIPI CSI/DSI (2x4-lane),PCIe Gen 2 (1-lane),USB 3.0 (2x),USB 2.0 (2x)"
+          }
+        ],
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/item/1005010352390870.html?pdp_npi=6%40dis%21USD%21238.54%21119.27%21%21%211604.17%21802.08%21%402141315917804202174985866e0fd3%2112000052090090648%21affd%21%21%21%211%210%21",
+            "price": "$119.27",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CK2FCG1K?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$189.95",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.adafruit.com/product/6416",
+            "price": "$492",
+            "vendor": "Adafruit"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CRSNCJ6Y?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$259.95",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://octopart.com/opatz8j6/a1?t=yRsJ8hQRlx-xP7FpNB4k_7kd_1yWFlRdTS7bkdSjwX1vKGJTaXdyXA0iZnqHkGsR5PzZ0f4Isk9SD8a-2kcXZA-C5xHMduZcPUN6qwOrA8p5R9IL6fNyexbQkaCvusVGzuuvreWkzXtFAhKH_L6cHdoInk5RozmZDySdXHpH-7Rf6dQA-Rp1Bb_IFHaLg_AERFK8qUJ4_SIbb0VqAF8o1T6EDZdlyExgoRKbSCUzURwB0nMCzupSeV2veDMRig8ggOHk6xdN-NuYVNq4v2px5hnC4byN0WU",
+            "price": "$303.181",
+            "vendor": "LCSC"
+          },
+          {
+            "url": "https://octopart.com/opatz8j6/a1?t=eS3bGJEhHFL_xSkqUrsoyYYY8HSoTXW9ILAy9nQ4vUU2wVBHVp9Et_w-vgU1uCJeLppTQMMmLkhi3gps68R9VlV-nciqWH6dJVtKJ1eLckddghWPIwZCvTeqFqfQzircVgNK5Zc80P_McwpoIGGft32u1CRdxh-Sdb_DN2mbVMx5rCb6vHWBdV6Rx8ev-tVOpdmRK4G2PEbWxVxFzKplcoa4NQCvDvQiaK7ATK7rUwAZ382p_12iuSzY9mi2Q6jcwI97h_YIlg8LQsxE1ALPbqhYNVFQp64",
+            "price": "$374.1765",
+            "vendor": "UnikeyIC"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CVR1LP7G?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$209.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005006242722520.html?pdp_npi=6%40dis%21USD%2189.53%2189.53%21%21%21605.32%21605.32%21%402151fd3a17793572941837161e116a%2112000052738794183%21affd%21%21%21%211%210%21",
+            "price": "$89.53",
+            "vendor": "AliExpress"
+          }
+        ],
+        "documentationUrls": [
+          {
+            "url": "https://www.adafruit.com/product/6416",
+            "title": "Product Page (Adafruit)"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0CK2FCG1K?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "85x56x17mm",
+      "description": "High-performance single-board computer for edge AI processing, 8GB RAM model.",
+      "productName": "Raspberry Pi 5 (8GB)",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=Raspberry+Pi+5+8GB",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVZD0NJ4lB1BfnTrvjqipGnznftOdjpiulEJBk5IDGsPwYqyUSXjRBM19W6xYI2ED8U89QaffdIO7r82z3SaYcaNOst9jquP8oDTnSLLmDf5upFbP0q1lTLBBSoewzWMsYVfd45IJGWlqNMwK31EHkTYQJOaAHafZK9YXvXweNojC0UHTG4KdJm2qfHukMLHimKn5HjSQXslAncn2SeUCxp0YXN5aVc5tdt8YY7IBh51hPMn0SS4Fzl0WxGkgYLOKW7qVQKESgGFkJ9bT5mB7oINZBaS9SGlojU2DnMqWYp2BN7Lhb3N5kH0Kct3ux16RsivSnKZHZr69lWuWQKlHfloRwpoomOIs2tLB7NKnAyMulkiVmWLgT24KccsD4yllIFFW9aj5Ftb7j3VyEz43WrHYD366oyd7MkevafmCk6LX2TIhxEq7HHiZPZiiRrIS0h0aPDleLDDhj58VaVu4clm430oh8wFcMpQ0YfUsooVh7XsDRyr7OorJaAqphIfvcVoVKbu2WsZ60pYWf3UO9jRfmyPvY7t7ybioBpRuwiX0We3XVFWFrKeiRa1B1svA8vxFH8vIXNno8SRlQTL1GlozFKfBsgGrF07FQM73ZQ9Hmx0PjnQhAUHnJm7gP7QwCA7hzMJ0c8ebZiPNCht79BXtdKX6PrVF05GlMNwBGjOQyfmN8mWJ",
+      "estimatedCost": 80
+    },
+    {
+      "id": "sbc_power_supply",
+      "name": "SBC Power Adapter",
+      "pins": [
+        "USB_C_OUT",
+        "AC_IN"
+      ],
+      "type": "power",
+      "partId": "733e1734-8dc3-4907-bf26-3382193b1be4",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Raspberry+Pi+27W+USB-C+PD+Power+Supply&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://cdn-shop.adafruit.com/640x480/5814-02.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.adafruit.com/product/5814",
+            "price": "$14.04",
+            "vendor": "Adafruit"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0D3MFLNC1?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$22.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005006738842325.html?pdp_npi=6%40dis%21USD%2138.65%2114.34%21%21%21260.27%2196.54%21%40214114e317801995651408040e11f3%2112000038140260294%21affd%21%21%21%211%210%21",
+            "price": "$14.34",
+            "vendor": "AliExpress"
+          }
+        ],
+        "documentationUrls": [
+          {
+            "url": "https://www.adafruit.com/product/5814",
+            "title": "Product Page (Adafruit)"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0D3MFLNC1?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "74x45x32mm",
+      "description": "Official USB-C Power Delivery (PD) power supply providing stable 5V 5A for the Raspberry Pi 5.",
+      "productName": "Raspberry Pi 27W USB-C PD Power Supply",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=Raspberry+Pi+27W+Power+Supply",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0Jxg6Ip9m1U73JFGHsJQs8myiGgNuNblo24abW8BxajC8qtCVn5VjxIvk7rUFouN9FXM0B7C86iD4FQesLDIbPbvKgtXtHH27jG4YPxvmsKJwpvmEFo2ZxBSK0WlTLMDlKTn9vzi0nQlVEuImF3MtlWVCMzFym0YzsHObx9pw74MhdA5wcE9ydPP2yrg6XgZLXG2RScMbD3zqr7i0Y6hYARxc62PLYVTuUdvrjY4t9Pjjtze3NA01vhSPuFBkV0x8P60a2yJEQwapw2Ok7mts0ibHQV5yiojlUJTePx2MJad6JOSUoJIQFl16htVz3BxPt0JeSuzu6BEb04md39mpkJfjo7M8KbX1ToovMLjcaO5Wgd87WhFu1RxHXxnUX6FY3hohHza1HtoOwomnLkN6U07CXHe5AljE9FrA0SiIBZ7Yr28lqYV4urOD0MQvnyNzZZBuHS4MLUQbQcK7H8cEgDkv1x8eUbTV114ZahgPASohwyY0tPg93IxvaVnMd5168iTKNHLTGu2DUoih2iYNFU9da9PFqhNG5Tw89Epkc5wLZsFI5u08C2tWrMEHDk5PHglJ97j4FXdcrpz5y1ot75pVIdYSiBudl07oneNmPx2w1c8LIMtgznAAoQdHbAbFDlbp5nOnDImF1B3YpBVC8QHyX",
+      "estimatedCost": 12
+    },
+    {
+      "id": "laser_projector",
+      "name": "Hidden Laser Projector",
+      "pins": [
+        "HDMI_IN",
+        "AC_IN",
+        "USB_A_POWER_OUT"
+      ],
+      "type": "display",
+      "partId": "109971c1-29ff-4374-9e2e-58c30178474f",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Optoma+GT2000HDR+Short+Throw+Laser+Projector&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41o8+VxQUiL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.aliexpress.com/item/1005011923974395.html?pdp_npi=6%40dis%21USD%211419.34%211021.92%21%21%219603.13%216914.25%21%402101611117794597298447591e0fcc%2112000057041888737%21affd%21%21%21%211%210%21",
+            "price": "$1021.92",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B07W62S2SJ?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$935",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B07W62S2SJ?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "274x216x114mm",
+      "productName": "Optoma GT2000HDR Short Throw Laser Projector",
+      "purchaseUrl": "https://www.amazon.com/dp/B07W62S2SJ?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/NdpwztbAIgDMmxGbP8fFks7yUFfsHjzlImSYmA68h7xlMRgzueFsRgokQ9f9hcpVKttxtQE2VzIoqkXJXrpOr6uR3zv7mP4CDO9CddoFf4t0QE5DXPy8Pgjhz4irfQSEjEGUmy5yF3A5gJ9h3NYjLMgqIMqa3zcpq5E2BC3W5EbV40Dm9buQxWpZzw1lbX8Zm2kZtNIa4KyDieNjsH7IU6Yv8StELKVvT9r4eFAaXPGhwHsgaDqdNcmY116r3GC2YvsOopeiiZPhJrV0cwgOQDSkW93v7gVKDqPkXyZF1oSWa6wSAOeznMFVlVZDO3px9mUl2GfbBiHaAWllqz1E7l40fjqMavQgYeov91HKR1vhiksKt4qqF2cTM8v9r6SDpI3bHfWJfT3KvPHhtLvhvdInxl26rsUTztST7nIQic22fLFcuMWLalOQzInA2W3361UDXjyMn9GjREKtgFd0uoHvKHRlsUuVX7PfiINyl2rP6FQa9Gmuf1njWotGLxGsDPcisQGQvk7TibA9k1MeUh1Xbp514rrEnykRI2RAY46ErWqmkQIxznsS2NY5JG0W17mfkSFOdEGaVHu1dhs8f6zJi6GPe1e8B3dyr61jrDzQGuM31t2h2UKlxiR5OmUIF8GTKHd7RJkvnB73H1SWANYWtmdRZR00mp7n4U1sLHiDiGyAs916Wjzbr13lWvsI10XY9Rf2ipuECH5lFynbTAWXHdfvQv39nT9bJNlYmjlhtK6VwhAHeXUNjmzFAa8Wq39klLBsghVJg12AvBmDNXcMMCUXWyZ9gID9Mnq96tMv5LyfteFNNeWy4wDzhG3ifIIzfGys2BpXvm2ShNPdMjwLIFFU4wrdzaXAOpPxhoxrev8m90KVV1NX2CMUZkUkh5pH4rNSsvwhMDJupVlMX8U84lgBG2SoYs6XsJoZ2CH2h0VDEnebDA6ojBaWZMb2EfZAZpoH4n2zWsbhfseydSPI0wczk61NL4YmJLYqntISr",
+      "estimatedCost": 999
+    },
+    {
+      "id": "hdmi_cable",
+      "name": "Projector Video Cable",
+      "pins": [
+        "HDMI_M_0",
+        "HDMI_M_1"
+      ],
+      "type": "module",
+      "partId": "fd6419c2-f9f9-4f2c-97f7-550ab33bec2a",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=High-Speed+HDMI+2.0+Cable+1.5m&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41gFll2R6iL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0DZSWRCZY?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$7.89",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0DZSWRCZY?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "1500x20x10mm",
+      "productName": "High-Speed HDMI 2.0 Cable 1.5m",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=High+Speed+HDMI+Cable+1.5m",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxgR16OOv6aoGum8rXtPLeG2r97XTUXIMJCy10drH6buCXhgOrSeWp1CDMfpikOSVY8qqZxadIXjwZucD3tRrEkk6M3wo7ic8TTTHckFfz37L3LBEFwFjKegJmmGM1kus3bIAXAImvF1ZVTrNH8cMTYv7GqMWq3kANZ5XQt54GSg0rrOK2qDQzcIwvnvPWOk4x8mUrMUWi2FPjqHcIW7MOfbz0RqszhWsdBSxq6AJBJvYCaH7g0dzRVTTfM2ZRSmO7dfeF0L74vZOMwPpIUnGkmVXqZ0goRQooFJtB65LCbBfuKvGV1yW1LVGgTfrDJX5Qc3uqMXc4B6uptnIJ4qIb1A1T4o8x0xzPKMnhmkzlrdKNmIsUcWXB5nvNkDbhotf9GiuT6c7HX3BJI9lCPIuhDIFZqpXB8BwkWqrKKHF60DKBQ6ZDDgiTtSG0HXuTCu942huw0Qa7INvKUxdAj3q8JxAmRS7wYDKTtW0cLhNCb1iSyYa3XgXLiZLZ2nyFhOGf12jqw4rC3V3adHr8kW7ssMcfgpSsCTShMvWuFTvD4x4IlsBlgvH8U5XUTx0kr8iU4OPu0pA12aU6PZ5vLJi90xGs88628yxzpyfJsHvlV1PtNqyJPMgAZTEYxUglS5JmDaFR6td2VOUb0Hn7KehAvxd",
+      "estimatedCost": 8.5
+    },
+    {
+      "id": "bezel_led_strip",
+      "name": "Chamber Ambient Backlight",
+      "pins": [
+        "5V",
+        "GND",
+        "DIN",
+        "DOUT"
+      ],
+      "type": "actuator",
+      "partId": "7b983e15-f068-42b2-8de7-204528ba8f15",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Adafruit+NeoPixel+RGBW+Waterproof+LED+Strip+%281m%29&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51FZViNlS5L._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0C41LM99V?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$30.73",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-adafruit-neopixel-led-strip-60-leds-m.html",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0C41LM99V?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "1000x12x4mm",
+      "productName": "Adafruit NeoPixel RGBW Waterproof LED Strip (1m)",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=Adafruit+NeoPixel+RGBW+Strip",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c4qiZeNT",
+      "estimatedCost": 24.95
+    },
+    {
+      "id": "led_power_regulator",
+      "name": "LED Power Step-Down",
+      "pins": [
+        "VIN",
+        "GND",
+        "VOUT",
+        "SHDN"
+      ],
+      "type": "power",
+      "partId": "8b1f48d8-0a38-412c-88ef-301764013879",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Pololu+5V+5A+Step-Down+Voltage+Regulator+D24V50F5&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/513RPlFN8cL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B09C4HPNJ8?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$14.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0BJKV91CK?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$37.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B07K8T56P3?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$25.25",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005005619541811.html?pdp_npi=6%40dis%21USD%211.07%211.07%21%21%211.07%211.07%21%402140d36117796144299078327e11a9%2112000033772057699%21affd%21%21%21%211%210%21",
+            "price": "$1.07",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B09C4HPNJ8?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "20x18x9mm",
+      "description": "High-efficiency, reliable step-down voltage regulator to provide 5V for logic circuits, replacing the previous LM2596-based module. Based on the MP9941 chipset.",
+      "productName": "Pololu 5V 5A Step-Down Voltage Regulator D24V50F5",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=Pololu+5V+5A+Step-Down",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxgZAFQir4RS0D0rVeC2goqPJM6VFgxpEvLItF7r993ejabyUEjzNwaOhcf4AsUAjY7XEKTXbjDVvizgSsnDFzmCHuyCqTzLhZfjBTaXxGa9aQE9TJVynymEL58Ax9EsT7dEF3rI0O4XBNdQflM5iiGBGNmj5w8BW55VmL7Z8RvMT6T7EHSe2lzSexSgbLw5USnljKdZz5hbBHxtxjB4iM5m26NjSOf2tPQ27hYPIi5eLriNThCRbCUq5z0CfLFIMbe7deMGCeQ0LbWWuTaVuGmHZcrkxiz1kqyDEWavqWYuPoYJSkEltX8r1IbkXvuJSXrAKK2JH4XKYl2W3kdRruPUDpYgWmZCNsoM2tWnFt6cMV0ar1l1J8jP4WtBEMfvLvtyOuJfxedpC80KNKq6h2ifq9kGYVBTcO7DRH81T8T0RMOZSMlK3oOFXAenp7CsHWsr2EDK10U8Tj8PnuRk1d6kAQs7EHNOjoPfmziqSV6OUCBMR6yi2G4YJJFxr17dZZIsVBZ2HKVcu9GVORkIloY0AHA7VJrMNXHcZm4PwMJMPL3IFpOnRucMTImPy6IOLKkX2VFv7oQuuIIbN9tb9g2xeqA8zpi2qKiyVxcP1zXvcNj3yIsJSJSTCC7q0F5WCFmkdJV26P6xgug3E9vDhZjvp",
+      "estimatedCost": 14.95
+    },
+    {
+      "id": "system_power_supply",
+      "name": "12V System Power Supply",
+      "pins": [
+        "AC_L",
+        "AC_N",
+        "FG",
+        "V-",
+        "V+"
+      ],
+      "type": "power",
+      "partId": "a9787116-ffa2-4c49-9a7b-a5739127fcad",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Mean+Well+LRS-100-12+%2812V+8.5A%29&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "electrical",
+      "imageUrl": "https://m.media-amazon.com/images/I/517l52vtMAL._SL500_.jpg",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B019GYOMN6?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$19.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/item/1005008080688461.html?pdp_npi=6%40dis%21USD%2142.29%2126.44%21%21%21286.15%21178.89%21%402141149b17796069166863647e0fa7%2112000043590279010%21affd%21%21%21%211%210%21",
+            "price": "$26.44",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B019GYOMN6?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "129x97x30mm",
+      "description": "Converts grid AC power to 12V DC for system operation and battery charging.",
+      "productName": "Mean Well LRS-100-12 (12V 8.5A)",
+      "purchaseUrl": "https://www.digikey.com/en/products/result?keywords=LRS-100-12",
+      "aliexpressUrl": "https://s.click.aliexpress.com/s/fwx308cRD9Eny963e3KDdYxyIpNj8TXVr7saiF9Um5rMUg1kZtJALLnfa2LNXtiVgnxdD8Og6MmvwBoxhnSYQGM6r0c08U4TfX8DFGo7vviCuu3q62Q60OAhRZcqm3G8PtwM69xY7TOEWRrvulP5ukZQ4uQbBBtaVsdr6EffAqVmp3O5GyUANU2DoA3dJufNhDfh7KOlLgKIvRVhDxRESHLmea6fTE26gLUqKEUuuizJiLENrCbax94DZHDu8WhaXM9vQ86gzlqceNPO5w3vwXm4VrBF3x2lAMEl06wgNdTSMiT7cNG4HIdW0JxI4uS3RWYWGOokkZv773nBVNulCGQ55P1jZkB0P9tAb5bfSyWCcfoB1bJjelyhP49kgyGFMhKoKkd50vA7EyxlhmuXH8Ai5NH8eCaqO3bxqKRbe49iDMKT3pwe0lRcdnHeFz0yrx4Yg4CIiN9kYcShjiT3GoPnkg8y2JxTIbP9J6YWtwC3bDnGRGaWiXR9NRFdFIlxtOHLazC4uYF1otUAbVaFrq56MYQWMOubaiBT0XSlPaDqLfyDpZWz0eV3vRK6rP3JAqb8Hp2kDxUX16ok8Io7gH0z6gp3resFljzIJwtkfJzG70jzqcynQDj2ORqHHYCqZWVEpWJMV6w8QFQQarAIglyuuOxH8pmZN8Ul0HSRZNPUDS9cxTouClyBZ8Onl3jNVjeSJekQ7qT8kWeRqwhrE2iBHO76ctYIIsnfauQRAYofyD4cIh1pvv540ocSj0Nmi96UZoAQO2P68S5Aw8HPMDZZlZFx3gyVulmPUuyGxdkjkhIDAnDUJuZ1r2J0Sz4z9UJhwB8hHLwnE5Ack923yzxD1KSS5z7KYHFD4cXax9i2swhwS97TQT9VcRyExjGS6MLHPku3FYD8xjsPmoXCgMn5tBf17nCaOmmdRXR2pXjFYtWiPB0tyFdTpfCagC7H0ktC0FWZPZbWGllUEf",
+      "estimatedCost": 22.5
+    },
+    {
+      "id": "main_chassis_base",
+      "name": "Chassis Lower Base",
+      "type": "structural",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=1%2F2+inch+Black+MDF+Sheet&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "material": "MDF",
+      "quantity": 1,
+      "dimensions": "400x400x12.7mm",
+      "description": "CNC-routed or cut lower base providing a stable, light-absorbing floor for the projection assembly.",
+      "productName": "1/2 inch Black MDF Sheet",
+      "purchaseUrl": "https://www.homedepot.com/s/black%20MDF%20sheet",
+      "estimatedCost": 15
+    },
+    {
+      "id": "chassis_enclosure_hood",
+      "name": "Enclosure Matte Hood",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=1%2F4+inch+Black+Acrylic+Sheet+Matte+Finish&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "material": "Acrylic",
+      "quantity": 1,
+      "dimensions": "400x400x300mm",
+      "description": "Upper shroud that isolates the internal chamber from external light and conceals the optical combiner edges.",
+      "productName": "1/4 inch Black Acrylic Sheet Matte Finish",
+      "purchaseUrl": "https://www.amazon.com/s?k=matte+black+acrylic+sheet+1%2F4",
+      "estimatedCost": 28.5
+    },
+    {
+      "id": "beamsplitter_glass",
+      "name": "AR Beamsplitter Glass",
+      "type": "mechanism",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Single-Sided+AR+Coated+Teleprompter+Glass&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "material": "Glass",
+      "quantity": 1,
+      "dimensions": "300x300x3mm",
+      "description": "Premium beamsplitter glass with single-sided anti-reflective coating to eliminate double-image ghosting.",
+      "productName": "Single-Sided AR Coated Teleprompter Glass",
+      "purchaseUrl": "https://www.amazon.com/s?k=teleprompter+glass+70%2F30",
+      "estimatedCost": 65
+    },
+    {
+      "id": "left_glass_angle_bracket",
+      "name": "Left Glass Pivot Bracket",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "research": {
+        "specs": [
+          {
+            "label": "Material Recommendation",
+            "value": "PETG or ABS for enhanced structural rigidity"
+          },
+          {
+            "label": "Layer Height",
+            "value": "0.20 mm"
+          },
+          {
+            "label": "Infill Density & Pattern",
+            "value": "40% Gyroid"
+          },
+          {
+            "label": "Support Requirements",
+            "value": "Yes, buildplate only"
+          },
+          {
+            "label": "Print Orientation",
+            "value": "Laid flat on its side to optimize tensile strength along the pivot axis"
+          },
+          {
+            "label": "Dimensions",
+            "value": "48mm x 35mm x 22mm"
+          },
+          {
+            "label": "Adjustment Range",
+            "value": "40 to 50 degrees (optimized for 45-degree nominal lock)"
+          },
+          {
+            "label": "Estimated Print Time",
+            "value": "1h 15m (on standard coreXY printer)"
+          }
+        ],
+        "summary": "The Left Glass Pivot Bracket is a custom 3D-printed mechanical component designed to securely hold and finely adjust the left side of the AR beamsplitter glass. It features integrated tensioning slots and pivot holes to achieve a highly stable, precise 45-degree projection angle within the simulator chassis.",
+        "sourcing": []
+      },
+      "dimensions": "50x120x45mm",
+      "description": "Custom printed adjustable bracket to securely hold the left side of the beamsplitter glass at a precise 45-degree angle.",
+      "purchaseUrl": "https://www.amazon.com/s?k=black+PETG+filament",
+      "estimatedCost": 3.5,
+      "printSettings": "40% infill, 0.2mm layer, black matte"
+    },
+    {
+      "id": "right_glass_angle_bracket",
+      "name": "Right Glass Pivot Bracket",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "dimensions": "50x120x45mm",
+      "description": "Custom printed adjustable bracket to securely hold the right side of the beamsplitter glass at a precise 45-degree angle.",
+      "purchaseUrl": "https://www.amazon.com/s?k=black+PETG+filament",
+      "estimatedCost": 3.5,
+      "printSettings": "40% infill, 0.2mm layer, black matte"
+    },
+    {
+      "id": "diffuser_screen_sheet",
+      "name": "Rear Projection Screen Material",
+      "type": "structural",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=High-Contrast+Rear+Projection+Film+Screen&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "material": "PVC Film",
+      "quantity": 1,
+      "dimensions": "280x210x1mm",
+      "description": "Rear projection diffusion surface to catch the laser projector's image in the hidden well.",
+      "productName": "High-Contrast Rear Projection Film Screen",
+      "purchaseUrl": "https://www.amazon.com/s?k=rear+projection+film",
+      "estimatedCost": 18
+    },
+    {
+      "id": "diffuser_frame_holder",
+      "name": "Diffuser Screen Tension Frame",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "dimensions": "300x230x10mm",
+      "description": "Tension frame that mounts the rear-projection diffuser screen flat beneath the glass viewing zone.",
+      "purchaseUrl": "https://www.amazon.com/s?k=black+PLA+filament",
+      "estimatedCost": 4.5,
+      "printSettings": "20% infill, 0.2mm layer"
+    },
+    {
+      "id": "projector_mount_bracket",
+      "name": "Projector Rigid Cradle Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "laser_projector",
+      "dimensions": "180x140x55mm",
+      "description": "Sturdy base bracket that clamps and aligns the ultra-short throw laser projector at the optimal throw angle.",
+      "purchaseUrl": "https://www.amazon.com/s?k=black+PETG+filament",
+      "estimatedCost": 6.8,
+      "printSettings": "35% infill, 0.2mm layer"
+    },
+    {
+      "id": "sbc_mount_plate",
+      "name": "SBC Mounting Baseplate",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "mountsFor": "main_sbc",
+      "dimensions": "110x75x12mm",
+      "description": "Elevated mounting adapter plate with integrated strain relief for Raspberry Pi 5 interface cables.",
+      "purchaseUrl": "https://www.amazon.com/s?k=black+PLA+filament",
+      "estimatedCost": 1.9,
+      "printSettings": "20% infill, 0.2mm layer"
+    },
+    {
+      "id": "power_supply_mount",
+      "name": "System PSU Bracket",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PLA",
+      "quantity": 1,
+      "mountsFor": "system_power_supply",
+      "dimensions": "150x65x40mm",
+      "description": "Snap-fit bracket to mount the 12V system power brick to the interior chassis wall.",
+      "purchaseUrl": "https://www.amazon.com/s?k=black+PLA+filament",
+      "estimatedCost": 2.2,
+      "printSettings": "25% infill, 0.2mm layer"
+    },
+    {
+      "id": "led_strip_diffuser_channel",
+      "name": "Chamber LED Mounting Channel",
+      "type": "structural",
+      "partId": "9a3c7777-ee40-48dc-aee7-e77933fed6eb",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Muzata+V-Shape+Aluminum+LED+Channel+with+Milky+Cover&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/41M9ij1AclL._SL500_.jpg",
+      "material": "Aluminum",
+      "quantity": 1,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B08TWPP7TF?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$39.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-muzata-v-shape-led-aluminum-channel.html",
+            "vendor": "AliExpress"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B092QH1DJX?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$199.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B01MS89UER?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$25.99",
+            "vendor": "Amazon"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B08TWPP7TF?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "1000x16x16mm",
+      "description": "Angled aluminum extrusion and frosted diffuser cover to neatly hide the bezel LED strip.",
+      "productName": "Muzata V-Shape Aluminum LED Channel with Milky Cover",
+      "purchaseUrl": "https://www.amazon.com/dp/B01MS89UER?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c3VLzTxj",
+      "estimatedCost": 12
+    },
+    {
+      "id": "assembly_fasteners",
+      "name": "Chassis Socket Cap Screws",
+      "type": "misc",
+      "partId": "2e19d0c0-e2d8-43b7-a721-37a2508124d0",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=iExcell+M3+Hex+Socket+Head+Cap+Screws+Assortment&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51QBRV9lamL._SL500_.jpg",
+      "material": "Steel",
+      "quantity": 50,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0812TYT5L?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$26.86",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-iexcell-m3-hex-socket-head-cap-screws-assortment.html",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0812TYT5L?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "M3x12mm",
+      "description": "Black-oxide M3 hardware pack for securing printed brackets, optical mounts, and SBC plate to the chassis.",
+      "productName": "iExcell M3 Hex Socket Head Cap Screws Assortment",
+      "purchaseUrl": "https://www.amazon.com/dp/B0812TYT5L?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c4BZW607",
+      "estimatedCost": 0.08
+    },
+    {
+      "id": "chassis_heatset_inserts",
+      "name": "M3 Threaded Heat-Set Inserts",
+      "type": "misc",
+      "partId": "c39caf09-01c9-4348-a5a3-b4ffede5a33e",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=uxcell+M3+Brass+Heat-Set+Knurled+Threaded+Inserts&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "imageUrl": "https://m.media-amazon.com/images/I/51xjq7bzr6L._SL500_.jpg",
+      "material": "Brass",
+      "quantity": 30,
+      "research": {
+        "sourcing": [
+          {
+            "url": "https://www.amazon.com/dp/B0DHXT5WGL?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$9.49",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0DHXV9XZY?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$12.99",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.amazon.com/dp/B0CB8LKVYF?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+            "price": "$8.39",
+            "vendor": "Amazon"
+          },
+          {
+            "url": "https://www.aliexpress.com/w/wholesale-uxcell-m3-x-5-7mm-brass-knurled-threaded-inserts.html",
+            "vendor": "AliExpress"
+          }
+        ]
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B0DHXT5WGL?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "dimensions": "M3x5mm",
+      "description": "Threaded brass inserts for secure, repeatable installation of printed brackets to structural mounts.",
+      "productName": "uxcell M3 Brass Heat-Set Knurled Threaded Inserts",
+      "purchaseUrl": "https://www.amazon.com/dp/B0CB8LKVYF?tag=blueprintam-20&linkCode=osi&th=1&psc=1",
+      "aliexpressUrl": "https://s.click.aliexpress.com/e/_c3tbAEBH",
+      "estimatedCost": 0.12
+    },
+    {
+      "id": "velvet_flocking_liner",
+      "name": "Light Absorbing Velvet Liner",
+      "type": "enclosure",
+      "ebayUrl": "https://www.ebay.com/sch/i.html?_nkw=Self-Adhesive+Black+Velvet+Flocking+Sheet&_sacat=0&_from=R40&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339153059&customid=blueprint&toolid=10001&mkevt=1",
+      "category": "mechanical",
+      "material": "Velvet fabric",
+      "quantity": 1,
+      "dimensions": "400x1000x1mm",
+      "description": "Ultra-black self-adhesive flocking to line the interior walls of the chamber, absorbing stray laser light.",
+      "productName": "Self-Adhesive Black Velvet Flocking Sheet",
+      "purchaseUrl": "https://www.amazon.com/s?k=self-adhesive+black+velvet+flocking+sheet",
+      "estimatedCost": 14.99
+    },
+    {
+      "id": "hdmi_cable_mount",
+      "name": "Projector Video Cable Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "hdmi_cable",
+      "dimensions": "50x40x12mm",
+      "description": "Adapter plate for the Projector Video Cable that bolts to the main chassis with M3 hardware. Includes wire-routing channels.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    },
+    {
+      "id": "bezel_led_strip_mount",
+      "name": "Chamber Ambient Backlight Mount",
+      "type": "3d_printed",
+      "category": "mechanical",
+      "material": "PETG",
+      "quantity": 1,
+      "mountsFor": "bezel_led_strip",
+      "dimensions": "50x50x20mm",
+      "description": "Per-position bracket for the Chamber Ambient Backlight with M3 mounting holes matched to its bolt pattern. Rated for the actuator's continuous torque/load class.",
+      "purchaseUrl": "",
+      "estimatedCost": 2,
+      "printSettings": "30% infill, 0.2mm layer, 4 perimeters"
+    }
+  ],
+  "notes": [
+    "hologram trick",
+    "Pepper's Ghost trick",
+    "no visible glass",
+    "floating in air",
+    "reservoir simulation model"
+  ],
+  "assembly": {
+    "version": 2,
+    "joints": [
+      {
+        "id": "mig-left_glass_angle_bracket-beamsplitter_glass",
+        "parent": {
+          "part": "left_glass_angle_bracket"
+        },
+        "child": {
+          "part": "beamsplitter_glass"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 175,
+            "y": 22.5,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-bezel_led_strip_mount-bezel_led_strip",
+        "parent": {
+          "part": "bezel_led_strip_mount"
+        },
+        "child": {
+          "part": "bezel_led_strip"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": 8,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-chassis_enclosure_hood-bezel_led_strip_mount",
+        "parent": {
+          "part": "chassis_enclosure_hood"
+        },
+        "child": {
+          "part": "bezel_led_strip_mount"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": -140,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-main_chassis_base-diffuser_frame_holder",
+        "parent": {
+          "part": "main_chassis_base"
+        },
+        "child": {
+          "part": "diffuser_frame_holder"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": 11.299999999999999,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-diffuser_frame_holder-diffuser_screen_sheet",
+        "parent": {
+          "part": "diffuser_frame_holder"
+        },
+        "child": {
+          "part": "diffuser_screen_sheet"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-projector_mount_bracket-laser_projector",
+        "parent": {
+          "part": "projector_mount_bracket"
+        },
+        "child": {
+          "part": "laser_projector"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": 84.5,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-chassis_enclosure_hood-led_power_regulator",
+        "parent": {
+          "part": "chassis_enclosure_hood"
+        },
+        "child": {
+          "part": "led_power_regulator"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 100,
+            "y": 99.99999999999997,
+            "z": 100
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-chassis_enclosure_hood-led_strip_diffuser_channel",
+        "parent": {
+          "part": "chassis_enclosure_hood"
+        },
+        "child": {
+          "part": "led_strip_diffuser_channel"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": -142,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-main_chassis_base-left_glass_angle_bracket",
+        "parent": {
+          "part": "main_chassis_base"
+        },
+        "child": {
+          "part": "left_glass_angle_bracket"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": -175,
+            "y": 28.799999999999997,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-chassis_enclosure_hood-main_chassis_base",
+        "parent": {
+          "part": "chassis_enclosure_hood"
+        },
+        "child": {
+          "part": "main_chassis_base"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": -156.3,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-sbc_mount_plate-main_sbc",
+        "parent": {
+          "part": "sbc_mount_plate"
+        },
+        "child": {
+          "part": "main_sbc"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": 14.5,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-main_chassis_base-power_supply_mount",
+        "parent": {
+          "part": "main_chassis_base"
+        },
+        "child": {
+          "part": "power_supply_mount"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": 26.299999999999997,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-main_chassis_base-projector_mount_bracket",
+        "parent": {
+          "part": "main_chassis_base"
+        },
+        "child": {
+          "part": "projector_mount_bracket"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": 33.8,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-main_chassis_base-right_glass_angle_bracket",
+        "parent": {
+          "part": "main_chassis_base"
+        },
+        "child": {
+          "part": "right_glass_angle_bracket"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 175,
+            "y": 28.799999999999997,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-main_chassis_base-sbc_mount_plate",
+        "parent": {
+          "part": "main_chassis_base"
+        },
+        "child": {
+          "part": "sbc_mount_plate"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": 12.299999999999999,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-chassis_enclosure_hood-sbc_power_supply",
+        "parent": {
+          "part": "chassis_enclosure_hood"
+        },
+        "child": {
+          "part": "sbc_power_supply"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": -100,
+            "y": 99.99999999999997,
+            "z": 100
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-power_supply_mount-system_power_supply",
+        "parent": {
+          "part": "power_supply_mount"
+        },
+        "child": {
+          "part": "system_power_supply"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": 35.00000000000001,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "id": "mig-chassis_enclosure_hood-velvet_flocking_liner",
+        "parent": {
+          "part": "chassis_enclosure_hood"
+        },
+        "child": {
+          "part": "velvet_flocking_liner"
+        },
+        "type": "rigid",
+        "offset": {
+          "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rotationDeg": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }
+    ]
+  },
+  "projectName": "Holographic Reservoir Simulator",
+  "originalPrompt": "Create a reservoir simulation model using a hologram trick or Pepper's Ghost trick to project the model in the air without any visible glass or transparent material sheets",
+  "instructionSteps": [
+    {
+      "id": "fabricate",
+      "subSteps": [
+        {
+          "id": "fabricate_1",
+          "title": "3D print brackets and mounts",
+          "partIds": [
+            "left_glass_angle_bracket",
+            "right_glass_angle_bracket",
+            "diffuser_frame_holder",
+            "projector_mount_bracket",
+            "sbc_mount_plate",
+            "power_supply_mount",
+            "bezel_led_strip_mount",
+            "hdmi_cable_mount"
+          ]
+        },
+        {
+          "id": "fabricate_2",
+          "title": "Install heat-set inserts into chassis base",
+          "detail": {
+            "tip": "Keep the soldering iron completely perpendicular to the MDF board to prevent the brass inserts from setting at an angle, which could cause misalignment during bracket assembly.",
+            "steps": [
+              "Locate the pre-drilled or CNC-routed mounting holes on the top surface of the Chassis Lower Base.",
+              "Clean out any wood dust or debris from the thirty mounting holes using a vacuum or compressed air.",
+              "Heat a soldering iron fitted with an M3-compatible brass insertion tip to 220°C.",
+              "Place an M3 Threaded Heat-Set Insert vertically over one of the chassis mounting holes.",
+              "Gently press the hot soldering iron tip into the center of the brass insert until it melts and sinks flush into the Chassis Lower Base.",
+              "Repeat the insertion process for all remaining twenty-nine mounting holes on the chassis base, ensuring each insert sits perfectly square."
+            ],
+            "summary": "Install thirty M3 brass heat-set inserts into the Chassis Lower Base."
+          },
+          "partIds": [
+            "main_chassis_base",
+            "chassis_heatset_inserts"
+          ]
+        },
+        {
+          "id": "fabricate_3",
+          "title": "Cut and install velvet flocking liner inside hood",
+          "partIds": [
+            "chassis_enclosure_hood",
+            "velvet_flocking_liner"
+          ]
+        },
+        {
+          "id": "fabricate_4",
+          "title": "Attach rear projection screen to tension frame",
+          "partIds": [
+            "diffuser_screen_sheet",
+            "diffuser_frame_holder"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wire",
+      "subSteps": [
+        {
+          "id": "wire_1",
+          "title": "Connect AC input to 12V system power supply",
+          "partIds": [
+            "system_power_supply"
+          ]
+        },
+        {
+          "id": "wire_2",
+          "title": "Solder system power supply to LED power step-down",
+          "partIds": [
+            "system_power_supply",
+            "led_power_regulator"
+          ]
+        },
+        {
+          "id": "wire_3",
+          "title": "Solder LED power step-down output and SBC GPIO to LED strip",
+          "partIds": [
+            "led_power_regulator",
+            "main_sbc",
+            "bezel_led_strip"
+          ]
+        },
+        {
+          "id": "wire_4",
+          "title": "Route USB-C power to Main Controller SBC",
+          "partIds": [
+            "sbc_power_supply",
+            "main_sbc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bringup",
+      "subSteps": [
+        {
+          "id": "bringup_1",
+          "title": "Verify step-down regulator output voltage is 5V",
+          "partIds": [
+            "led_power_regulator",
+            "system_power_supply"
+          ]
+        },
+        {
+          "id": "bringup_2",
+          "title": "Test Main SBC power-on and HDMI output",
+          "partIds": [
+            "main_sbc",
+            "sbc_power_supply"
+          ]
+        },
+        {
+          "id": "bringup_3",
+          "title": "Test laser projector power-on and video source acquisition",
+          "partIds": [
+            "laser_projector"
+          ]
+        },
+        {
+          "id": "bringup_4",
+          "title": "Run test script to verify chamber LED addressability",
+          "partIds": [
+            "main_sbc",
+            "bezel_led_strip"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "assemble",
+      "subSteps": [
+        {
+          "id": "assemble_1",
+          "title": "Secure power supplies and SBC to the main chassis base",
+          "partIds": [
+            "main_chassis_base",
+            "sbc_mount_plate",
+            "main_sbc",
+            "power_supply_mount",
+            "system_power_supply",
+            "assembly_fasteners"
+          ]
+        },
+        {
+          "id": "assemble_2",
+          "title": "Mount and align projector with diffuser screen",
+          "partIds": [
+            "main_chassis_base",
+            "projector_mount_bracket",
+            "laser_projector",
+            "diffuser_frame_holder",
+            "assembly_fasteners"
+          ]
+        },
+        {
+          "id": "assemble_3",
+          "title": "Secure beamsplitter glass and brackets to base",
+          "partIds": [
+            "main_chassis_base",
+            "beamsplitter_glass",
+            "left_glass_angle_bracket",
+            "right_glass_angle_bracket",
+            "assembly_fasteners"
+          ]
+        },
+        {
+          "id": "assemble_4",
+          "title": "Mount LED strip in channel, route HDMI cable, and secure hood",
+          "partIds": [
+            "chassis_enclosure_hood",
+            "led_strip_diffuser_channel",
+            "bezel_led_strip",
+            "bezel_led_strip_mount",
+            "hdmi_cable",
+            "hdmi_cable_mount",
+            "main_chassis_base",
+            "assembly_fasteners"
+          ]
+        }
+      ]
+    }
+  ],
+  "projectImageHash": "cb43d27f2309f86057a54540962ce0162bc2465ff724405aefe9c8f47df6a156",
+  "projectDescription": "An interactive holographic reservoir simulator projects dynamic 3D geological models in mid-air using a hidden laser projector and optical combiner. Powered by a main controller SBC and illuminated by custom chamber ambient backlighting, the system achieves a floating Pepper's Ghost illusion without any visible glass edges.",
+  "imagePromptSnapshot": {
+    "tags": [
+      "hologram trick",
+      "Pepper's Ghost trick",
+      "no visible glass",
+      "floating in air",
+      "reservoir simulation model"
+    ],
+    "designHash": "d7525ae0f5206dde",
+    "description": "Create a reservoir simulation model using a hologram trick or Pepper's Ghost trick to project the model in the air without any visible glass or transparent material sheets",
+    "technicalDescription": "An interactive holographic reservoir simulator projects dynamic 3D geological models in mid-air using a hidden laser projector and optical combiner. Powered by a main controller SBC and illuminated by custom chamber ambient backlighting, the system achieves a floating Pepper's Ghost illusion without any visible glass edges."
+  },
+  "instructionPreamble": {
+    "tools": [
+      "3D printer capable of PETG and PLA",
+      "Soldering iron with fine tip",
+      "Wire strippers and cutters",
+      "M3 hex key",
+      "Heat-set insert installation tip or soldering iron",
+      "Multimeter",
+      "Double-sided adhesive tape",
+      "Precision hobby knife"
+    ],
+    "assumptions": [
+      "Access to standard 3D printer slicing software",
+      "Basic electronics soldering proficiency",
+      "SBC is pre-configured with operating system and HDMI output enabled",
+      "AC mains safety knowledge for handling the 12V power supply connections"
+    ]
+  },
+  "suggestedAskPrompts": [
+    "Does the 45-degree glass angle need adjustable brackets?",
+    "Will the projector heat buildup require active cooling fans?",
+    "Is a 12V supply necessary just for the LEDs?"
+  ],
+  "electricalConnections": [
+    {
+      "type": "power",
+      "source": "system_power_supply",
+      "target": "led_power_regulator",
+      "current": "3A",
+      "voltage": "12V"
+    },
+    {
+      "type": "power",
+      "source": "led_power_regulator",
+      "target": "bezel_led_strip",
+      "current": "2A",
+      "voltage": "5V"
+    },
+    {
+      "type": "data",
+      "label": "LED Data Signal",
+      "source": "main_sbc",
+      "target": "bezel_led_strip",
+      "protocol": "gpio",
+      "sourcePin": "GPIO4",
+      "targetPin": "DIN"
+    },
+    {
+      "type": "power",
+      "label": "Logic Ground Reference",
+      "source": "main_sbc",
+      "target": "bezel_led_strip",
+      "current": "100mA",
+      "voltage": "5V"
+    },
+    {
+      "type": "power",
+      "source": "sbc_power_supply",
+      "target": "main_sbc",
+      "current": "5A",
+      "voltage": "5V"
+    },
+    {
+      "type": "data",
+      "label": "HDMI Video Out",
+      "source": "hdmi_cable",
+      "target": "main_sbc",
+      "protocol": "gpio",
+      "sourcePin": "HDMI_M_0",
+      "targetPin": "HDMI_0"
+    },
+    {
+      "type": "data",
+      "label": "HDMI Video In",
+      "source": "hdmi_cable",
+      "target": "laser_projector",
+      "protocol": "gpio",
+      "sourcePin": "HDMI_M_1",
+      "targetPin": "HDMI_IN"
+    }
+  ],
+  "mechanicalConnections": [
+    {
+      "delta": {
+        "x": 0,
+        "y": -156.3,
+        "z": 0
+      },
+      "label": "M3 bolts and chassis_heatset_inserts",
+      "source": "chassis_enclosure_hood",
+      "target": "main_chassis_base"
+    },
+    {
+      "delta": {
+        "x": 175,
+        "y": -28.8,
+        "z": 0
+      },
+      "label": "M3 bolts and chassis_heatset_inserts",
+      "source": "left_glass_angle_bracket",
+      "target": "main_chassis_base"
+    },
+    {
+      "delta": {
+        "x": -175,
+        "y": -28.8,
+        "z": 0
+      },
+      "label": "M3 bolts and chassis_heatset_inserts",
+      "source": "right_glass_angle_bracket",
+      "target": "main_chassis_base"
+    },
+    {
+      "delta": {
+        "x": -175,
+        "y": -22.5,
+        "z": 0
+      },
+      "label": "clamping channel with rubber pad",
+      "source": "beamsplitter_glass",
+      "target": "left_glass_angle_bracket"
+    },
+    {
+      "delta": {
+        "x": 175,
+        "y": -22.5,
+        "z": 0
+      },
+      "label": "clamping channel with rubber pad",
+      "source": "beamsplitter_glass",
+      "target": "right_glass_angle_bracket"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": -11.3,
+        "z": 0
+      },
+      "label": "M3 bolts and chassis_heatset_inserts",
+      "source": "diffuser_frame_holder",
+      "target": "main_chassis_base"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "label": "tension clips",
+      "source": "diffuser_screen_sheet",
+      "target": "diffuser_frame_holder"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": -33.8,
+        "z": 0
+      },
+      "label": "M3 bolts",
+      "source": "projector_mount_bracket",
+      "target": "main_chassis_base"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": -12.3,
+        "z": 0
+      },
+      "label": "M3 standoffs and assembly_fasteners",
+      "source": "sbc_mount_plate",
+      "target": "main_chassis_base"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": -26.3,
+        "z": 0
+      },
+      "label": "M3 assembly_fasteners",
+      "source": "power_supply_mount",
+      "target": "main_chassis_base"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": 142,
+        "z": 0
+      },
+      "label": "snap-fit tracks",
+      "source": "led_strip_diffuser_channel",
+      "target": "chassis_enclosure_hood"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": 140,
+        "z": 0
+      },
+      "label": "double-sided adhesive",
+      "source": "bezel_led_strip_mount",
+      "target": "chassis_enclosure_hood"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "label": "self-adhesive backing",
+      "source": "velvet_flocking_liner",
+      "target": "chassis_enclosure_hood"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": 12.4,
+        "z": 0
+      },
+      "label": "M3 bolts",
+      "source": "hdmi_cable_mount",
+      "target": "main_chassis_base"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": 6.4,
+        "z": 0
+      },
+      "label": "threaded integration",
+      "source": "assembly_fasteners",
+      "target": "main_chassis_base"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": -6.3,
+        "z": 0
+      },
+      "label": "heat-pressed installation",
+      "source": "chassis_heatset_inserts",
+      "target": "main_chassis_base"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": 84.5,
+        "z": 0
+      },
+      "label": "mount",
+      "source": "projector_mount_bracket",
+      "target": "laser_projector"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": 14.5,
+        "z": 0
+      },
+      "label": "mount",
+      "source": "sbc_mount_plate",
+      "target": "main_sbc"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": 35,
+        "z": 0
+      },
+      "label": "mount",
+      "source": "power_supply_mount",
+      "target": "system_power_supply"
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": 0,
+        "z": 60
+      },
+      "label": "mount",
+      "source": "hdmi_cable_mount",
+      "target": "hdmi_cable",
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      }
+    },
+    {
+      "delta": {
+        "x": 0,
+        "y": 8,
+        "z": 0
+      },
+      "label": "mount",
+      "source": "bezel_led_strip_mount",
+      "target": "bezel_led_strip"
+    },
+    {
+      "delta": {
+        "x": 100,
+        "y": 100,
+        "z": 100
+      },
+      "label": "attached",
+      "source": "chassis_enclosure_hood",
+      "target": "led_power_regulator"
+    },
+    {
+      "delta": {
+        "x": -100,
+        "y": 100,
+        "z": 100
+      },
+      "label": "attached",
+      "source": "chassis_enclosure_hood",
+      "target": "sbc_power_supply"
+    }
+  ],
+  "suggestedImagePrompts": [
+    "sleek minimalist matte black cabinet with a recessed viewing aperture",
+    "light-absorbing velvet interior contrasting with a satin-textured housing",
+    "illuminated in a darkened gallery showing a floating blue topographic map"
+  ],
+  "suggestedAskPromptsHash": "v6::7022245c-072d-45c5-8512-34b51f0ff29f::assembly_fasteners,beamsplitter_glass,bezel_led_strip,bezel_led_strip_mount,chassis_enclosure_hood,chassis_heatset_inserts,diffuser_frame_holder,diffuser_screen_sheet,hdmi_cable,hdmi_cable_mount,laser_projector,led_power_regulator,led_strip_diffuser_channel,left_glass_angle_bracket,main_chassis_base,main_sbc,power_supply_mount,projector_mount_bracket,right_glass_angle_bracket,sbc_mount_plate,sbc_power_supply,system_power_supply,velvet_flocking_liner::hdmi_cable>laser_projector:data;hdmi_cable>main_sbc:data;led_power_regulator>bezel_led_strip:power;main_sbc>bezel_led_strip:data;main_sbc>bezel_led_strip:power;sbc_power_supply>main_sbc:power;system_power_supply>led_power_regulator:power::assembly_fasteners~main_chassis_base;beamsplitter_glass~left_glass_angle_bracket;beamsplitter_glass~right_glass_angle_bracket;bezel_led_strip_mount~bezel_led_strip;bezel_led_strip_mount~chassis_enclosure_hood;chassis_enclosure_hood~led_power_regulator;chassis_enclosure_hood~main_chassis_base;chassis_enclosure_hood~sbc_power_supply;chassis_heatset_inserts~main_chassis_base;diffuser_frame_holder~main_chassis_base;diffuser_screen_sheet~diffuser_frame_holder;hdmi_cable_mount~hdmi_cable;hdmi_cable_mount~main_chassis_base;led_strip_diffuser_channel~chassis_enclosure_hood;left_glass_angle_bracket~main_chassis_base;power_supply_mount~main_chassis_base;power_supply_mount~system_power_supply;projector_mount_bracket~laser_projector;projector_mount_bracket~main_chassis_base;right_glass_angle_bracket~main_chassis_base;sbc_mount_plate~main_chassis_base;sbc_mount_plate~main_sbc;velvet_flocking_liner~chassis_enclosure_hood",
+  "suggestedImagePromptsHash": "v1::7022245c-072d-45c5-8512-34b51f0ff29f::assembly_fasteners,beamsplitter_glass,bezel_led_strip,bezel_led_strip_mount,chassis_enclosure_hood,chassis_heatset_inserts,diffuser_frame_holder,diffuser_screen_sheet,hdmi_cable,hdmi_cable_mount,laser_projector,led_power_regulator,led_strip_diffuser_channel,left_glass_angle_bracket,main_chassis_base,main_sbc,power_supply_mount,projector_mount_bracket,right_glass_angle_bracket,sbc_mount_plate,sbc_power_supply,system_power_supply,velvet_flocking_liner::hdmi_cable>laser_projector:data;hdmi_cable>main_sbc:data;led_power_regulator>bezel_led_strip:power;main_sbc>bezel_led_strip:data;main_sbc>bezel_led_strip:power;sbc_power_supply>main_sbc:power;system_power_supply>led_power_regulator:power::assembly_fasteners~main_chassis_base;beamsplitter_glass~left_glass_angle_bracket;beamsplitter_glass~right_glass_angle_bracket;bezel_led_strip_mount~bezel_led_strip;bezel_led_strip_mount~chassis_enclosure_hood;chassis_enclosure_hood~led_power_regulator;chassis_enclosure_hood~main_chassis_base;chassis_enclosure_hood~sbc_power_supply;chassis_heatset_inserts~main_chassis_base;diffuser_frame_holder~main_chassis_base;diffuser_screen_sheet~diffuser_frame_holder;hdmi_cable_mount~hdmi_cable;hdmi_cable_mount~main_chassis_base;led_strip_diffuser_channel~chassis_enclosure_hood;left_glass_angle_bracket~main_chassis_base;power_supply_mount~main_chassis_base;power_supply_mount~system_power_supply;projector_mount_bracket~laser_projector;projector_mount_bracket~main_chassis_base;right_glass_angle_bracket~main_chassis_base;sbc_mount_plate~main_chassis_base;sbc_mount_plate~main_sbc;velvet_flocking_liner~chassis_enclosure_hood",
+  "projectId": "7022245c-072d-45c5-8512-34b51f0ff29f"
+}

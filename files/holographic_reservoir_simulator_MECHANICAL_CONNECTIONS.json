@@ -1,0 +1,260 @@
+[
+  {
+    "delta": {
+      "x": 0,
+      "y": -156.3,
+      "z": 0
+    },
+    "label": "M3 bolts and chassis_heatset_inserts",
+    "source": "chassis_enclosure_hood",
+    "target": "main_chassis_base",
+    "description": "Enclosure Matte Hood ↔ Chassis Lower Base — M3 bolts and chassis_heatset_inserts; Chassis Lower Base sits 156.3mm down from Enclosure Matte Hood"
+  },
+  {
+    "delta": {
+      "x": 175,
+      "y": -28.8,
+      "z": 0
+    },
+    "label": "M3 bolts and chassis_heatset_inserts",
+    "source": "left_glass_angle_bracket",
+    "target": "main_chassis_base",
+    "description": "Left Glass Pivot Bracket ↔ Chassis Lower Base — M3 bolts and chassis_heatset_inserts; Chassis Lower Base sits 175mm right, 28.8mm down from Left Glass Pivot Bracket"
+  },
+  {
+    "delta": {
+      "x": -175,
+      "y": -28.8,
+      "z": 0
+    },
+    "label": "M3 bolts and chassis_heatset_inserts",
+    "source": "right_glass_angle_bracket",
+    "target": "main_chassis_base",
+    "description": "Right Glass Pivot Bracket ↔ Chassis Lower Base — M3 bolts and chassis_heatset_inserts; Chassis Lower Base sits 175mm left, 28.8mm down from Right Glass Pivot Bracket"
+  },
+  {
+    "delta": {
+      "x": -175,
+      "y": -22.5,
+      "z": 0
+    },
+    "label": "clamping channel with rubber pad",
+    "source": "beamsplitter_glass",
+    "target": "left_glass_angle_bracket",
+    "description": "AR Beamsplitter Glass ↔ Left Glass Pivot Bracket — clamping channel with rubber pad; Left Glass Pivot Bracket sits 175mm left, 22.5mm down from AR Beamsplitter Glass"
+  },
+  {
+    "delta": {
+      "x": 175,
+      "y": -22.5,
+      "z": 0
+    },
+    "label": "clamping channel with rubber pad",
+    "source": "beamsplitter_glass",
+    "target": "right_glass_angle_bracket",
+    "description": "AR Beamsplitter Glass ↔ Right Glass Pivot Bracket — clamping channel with rubber pad; Right Glass Pivot Bracket sits 175mm right, 22.5mm down from AR Beamsplitter Glass"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": -11.3,
+      "z": 0
+    },
+    "label": "M3 bolts and chassis_heatset_inserts",
+    "source": "diffuser_frame_holder",
+    "target": "main_chassis_base",
+    "description": "Diffuser Screen Tension Frame ↔ Chassis Lower Base — M3 bolts and chassis_heatset_inserts; Chassis Lower Base sits 11.3mm down from Diffuser Screen Tension Frame"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "label": "tension clips",
+    "source": "diffuser_screen_sheet",
+    "target": "diffuser_frame_holder",
+    "description": "Rear Projection Screen Material ↔ Diffuser Screen Tension Frame — tension clips; Diffuser Screen Tension Frame centered on Rear Projection Screen Material"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": -33.8,
+      "z": 0
+    },
+    "label": "M3 bolts",
+    "source": "projector_mount_bracket",
+    "target": "main_chassis_base",
+    "description": "Projector Rigid Cradle Mount ↔ Chassis Lower Base — M3 bolts; Chassis Lower Base sits 33.8mm down from Projector Rigid Cradle Mount"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": -12.3,
+      "z": 0
+    },
+    "label": "M3 standoffs and assembly_fasteners",
+    "source": "sbc_mount_plate",
+    "target": "main_chassis_base",
+    "description": "SBC Mounting Baseplate ↔ Chassis Lower Base — M3 standoffs and assembly_fasteners; Chassis Lower Base sits 12.3mm down from SBC Mounting Baseplate"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": -26.3,
+      "z": 0
+    },
+    "label": "M3 assembly_fasteners",
+    "source": "power_supply_mount",
+    "target": "main_chassis_base",
+    "description": "System PSU Bracket ↔ Chassis Lower Base — M3 assembly_fasteners; Chassis Lower Base sits 26.3mm down from System PSU Bracket"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": 142,
+      "z": 0
+    },
+    "label": "snap-fit tracks",
+    "source": "led_strip_diffuser_channel",
+    "target": "chassis_enclosure_hood",
+    "description": "Chamber LED Mounting Channel ↔ Enclosure Matte Hood — snap-fit tracks; Enclosure Matte Hood sits 142mm up from Chamber LED Mounting Channel"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": 140,
+      "z": 0
+    },
+    "label": "double-sided adhesive",
+    "source": "bezel_led_strip_mount",
+    "target": "chassis_enclosure_hood",
+    "description": "Chamber Ambient Backlight Mount ↔ Enclosure Matte Hood — double-sided adhesive; Enclosure Matte Hood sits 140mm up from Chamber Ambient Backlight Mount"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "label": "self-adhesive backing",
+    "source": "velvet_flocking_liner",
+    "target": "chassis_enclosure_hood",
+    "description": "Light Absorbing Velvet Liner ↔ Enclosure Matte Hood — self-adhesive backing; Enclosure Matte Hood centered on Light Absorbing Velvet Liner"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": 12.4,
+      "z": 0
+    },
+    "label": "M3 bolts",
+    "source": "hdmi_cable_mount",
+    "target": "main_chassis_base",
+    "description": "Projector Video Cable Mount ↔ Chassis Lower Base — M3 bolts; Chassis Lower Base sits 12.4mm up from Projector Video Cable Mount"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": 6.4,
+      "z": 0
+    },
+    "label": "threaded integration",
+    "source": "assembly_fasteners",
+    "target": "main_chassis_base",
+    "description": "Chassis Socket Cap Screws ↔ Chassis Lower Base — threaded integration; Chassis Lower Base sits 6.4mm up from Chassis Socket Cap Screws"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": -6.3,
+      "z": 0
+    },
+    "label": "heat-pressed installation",
+    "source": "chassis_heatset_inserts",
+    "target": "main_chassis_base",
+    "description": "M3 Threaded Heat-Set Inserts ↔ Chassis Lower Base — heat-pressed installation; Chassis Lower Base sits 6.3mm down from M3 Threaded Heat-Set Inserts"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": 84.5,
+      "z": 0
+    },
+    "label": "mount",
+    "source": "projector_mount_bracket",
+    "target": "laser_projector",
+    "description": "Projector Rigid Cradle Mount ↔ Hidden Laser Projector — mount; Hidden Laser Projector sits 84.5mm up from Projector Rigid Cradle Mount"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": 14.5,
+      "z": 0
+    },
+    "label": "mount",
+    "source": "sbc_mount_plate",
+    "target": "main_sbc",
+    "description": "SBC Mounting Baseplate ↔ Main Controller SBC — mount; Main Controller SBC sits 14.5mm up from SBC Mounting Baseplate"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": 35,
+      "z": 0
+    },
+    "label": "mount",
+    "source": "power_supply_mount",
+    "target": "system_power_supply",
+    "description": "System PSU Bracket ↔ 12V System Power Supply — mount; 12V System Power Supply sits 35mm up from System PSU Bracket"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": 0,
+      "z": 60
+    },
+    "label": "mount",
+    "source": "hdmi_cable_mount",
+    "target": "hdmi_cable",
+    "rotation": {
+      "x": 0,
+      "y": 90,
+      "z": 0
+    },
+    "description": "Projector Video Cable Mount ↔ Projector Video Cable — mount; Projector Video Cable sits 60mm forward from Projector Video Cable Mount; Projector Video Cable rotated 90° about Y"
+  },
+  {
+    "delta": {
+      "x": 0,
+      "y": 8,
+      "z": 0
+    },
+    "label": "mount",
+    "source": "bezel_led_strip_mount",
+    "target": "bezel_led_strip",
+    "description": "Chamber Ambient Backlight Mount ↔ Chamber Ambient Backlight — mount; Chamber Ambient Backlight sits 8mm up from Chamber Ambient Backlight Mount"
+  },
+  {
+    "delta": {
+      "x": 100,
+      "y": 100,
+      "z": 100
+    },
+    "label": "attached",
+    "source": "chassis_enclosure_hood",
+    "target": "led_power_regulator",
+    "description": "Enclosure Matte Hood ↔ LED Power Step-Down — attached; LED Power Step-Down sits 100mm right, 100mm up, 100mm forward from Enclosure Matte Hood"
+  },
+  {
+    "delta": {
+      "x": -100,
+      "y": 100,
+      "z": 100
+    },
+    "label": "attached",
+    "source": "chassis_enclosure_hood",
+    "target": "sbc_power_supply",
+    "description": "Enclosure Matte Hood ↔ SBC Power Adapter — attached; SBC Power Adapter sits 100mm left, 100mm up, 100mm forward from Enclosure Matte Hood"
+  }
+]
